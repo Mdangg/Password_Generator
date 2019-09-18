@@ -103,8 +103,9 @@ function getPasswordOptions() {
 
   // Variable to store boolean regarding the inclusion of special characters
   var hasSpecialCharacters = confirm(
-
+    "Click OK to confirm including special characters."
   );
+
   // Variable to store boolean regarding the inclusion of uppercase characters
   var hasUpperCasedCharacters = confirm(
     "Click OK to confirm including uppercase characters."
@@ -114,7 +115,8 @@ function getPasswordOptions() {
   if (
     hasNumericCharacters === false &&
     hasLowerCasedCharacters === false &&
-    hasUpperCasedCharacters === false
+    hasUpperCasedCharacters === false && 
+    hasSpecialCharacters === false
   ) {
     alert("Must select at least one character type");
     return;
