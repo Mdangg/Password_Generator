@@ -3,6 +3,9 @@
 // Array of numeric characters to be included in password
 var numericCharacters = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
+// Array of special characters
+let specialCharacters=["!", "@","#", "$", "%", "^", "&", "*","(",")","-","+"];
+
 // Array of lowercase characters to be included in password
 var lowerCasedCharacters = [
   "a",
@@ -98,6 +101,10 @@ function getPasswordOptions() {
     "Click OK to confirm including lowercase characters."
   );
 
+  // Variable to store boolean regarding the inclusion of special characters
+  var hasSpecialCharacters = confirm(
+
+  );
   // Variable to store boolean regarding the inclusion of uppercase characters
   var hasUpperCasedCharacters = confirm(
     "Click OK to confirm including uppercase characters."
@@ -118,7 +125,8 @@ function getPasswordOptions() {
     length: length,
     hasNumericCharacters: hasNumericCharacters,
     hasLowerCasedCharacters: hasLowerCasedCharacters,
-    hasUpperCasedCharacters: hasUpperCasedCharacters
+    hasUpperCasedCharacters: hasUpperCasedCharacters,
+    hasSpecialCharacters: hasSpecialCharacters,
   };
 
   return passwordOptions;
